@@ -674,7 +674,7 @@
 
 	"roshan_respawn"
 	{
-		"BaseClass"							"skeleton_king_reincarnation"
+		"BaseClass"						"skeleton_king_reincarnation"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -738,6 +738,155 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"aura_radius_tooltip_scepter"	"1200"
+			}
+		}
+	}
+	"spawn_small_camp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/radiant_jungle/spawn_small_camp"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_furion/furion_teleport_flash_end.vpcf"
+		}
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCooldown"				"60.0"
+		
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"camps_spawned"					"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"spawn_radius"					"350"
+			}
+		}
+	}
+	"spawn_medium_camp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/radiant_jungle/spawn_medium_camp"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_furion/furion_teleport_flash_end.vpcf"
+		}
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCooldown"				"60.0"
+		
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"camps_spawned"					"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"spawn_radius"					"350"
+			}
+		}
+	}
+	"spawn_large_camp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/radiant_jungle/spawn_large_camp"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_furion/furion_teleport_flash_end.vpcf"
+		}
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCooldown"				"60.0"
+		
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"camps_spawned"					"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"spawn_radius"					"350"
+			}
+		}
+	}
+	"spawn_ancient_camp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/radiant_jungle/spawn_ancient_camp"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"FightRecapLevel"				"2"
+		
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_furion/furion_teleport_flash_end.vpcf"
+		}
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCooldown"				"60.0"
+		
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"camps_spawned"					"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"spawn_radius"					"350"
 			}
 		}
 	}
