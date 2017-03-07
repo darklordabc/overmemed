@@ -3,5 +3,22 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+"npc_dota_hero_beastmaster" 
+	{
+		"override_hero"   "npc_dota_hero_beastmaster"
+		"Model"						"models\creeps\roshan\roshan.mdl"	// Model.
+		"SoundSet"					"Roshan"					// Name of sound set.
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"roshan_spell_block"	// Ability 1.
+		"Ability2"					"roshan_bash"			// Ability 2.
+		"Ability3"					"roshan_slam"			// Ability 3.
+		"Ability4"					"roshan_respawn"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
 
 }
