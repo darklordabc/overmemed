@@ -1,2 +1,2 @@
-# moddota overthrow (working title)
+# moddota modders overthrow (working title)
 Meme overthrow custom game by dota 2 modders
