@@ -749,6 +749,7 @@
 		"ScriptFile"					"heroes/radiant_jungle/spawn_small_camp"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"FightRecapLevel"				"2"
+		"AbilityTextureName" "forest_troll_high_priest_heal"
 		
 		"precache"
 		{
@@ -757,10 +758,10 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime"			"10"
-		"AbilityCooldown"				"60.0"
+		"AbilityChannelTime"			"5"
+		"AbilityCooldown"				"60.0 50 40 20"
 		
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"200 150 100 50"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -786,6 +787,7 @@
 		"ScriptFile"					"heroes/radiant_jungle/spawn_medium_camp"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"FightRecapLevel"				"2"
+		"AbilityTextureName" "mud_golem_hurl_boulder"
 		
 		"precache"
 		{
@@ -794,10 +796,10 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime"			"10"
-		"AbilityCooldown"				"60.0"
+		"AbilityChannelTime"			"5"
+		"AbilityCooldown"				"60.0 50 40 20"
 		
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"200 150 100 50"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -823,6 +825,7 @@
 		"ScriptFile"					"heroes/radiant_jungle/spawn_large_camp"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"FightRecapLevel"				"2"
+		"AbilityTextureName" "satyr_hellcaller_unholy_aura"
 		
 		"precache"
 		{
@@ -831,10 +834,10 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime"			"10"
-		"AbilityCooldown"				"60.0"
+		"AbilityChannelTime"			"5"
+		"AbilityCooldown"				"60.0 50 40 20"
 		
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"200 150 100 50"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -861,6 +864,7 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"FightRecapLevel"				"2"
+		"AbilityTextureName" "spawnlord_master_freeze"
 		
 		"precache"
 		{
@@ -869,10 +873,10 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime"			"10"
-		"AbilityCooldown"				"60.0"
+		"AbilityChannelTime"			"5"
+		"AbilityCooldown"				"60.0 50 40 20"
 		
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"200 150 100 50"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
