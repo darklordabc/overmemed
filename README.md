@@ -34,6 +34,8 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **6.**  . And then from this github you can click pull requests, new pull request and make one from your branch to master. 
 ![Alt Text](https://i.gyazo.com/e700667d9888658bc86cc46e7bc303e5.gif)<br><br>
 
+**For more examples, check the pull requests that have already been merged, they will show exactly what files need to be modified https://github.com/darklordabc/overmemed/pulls?q=is%3Apr+is%3Aclosed**
+
 ## Done Heros
 5 out of 112 <br>
 **Lich King** - Cookies <br>
