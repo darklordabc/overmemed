@@ -3,7 +3,7 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
-"npc_dota_hero_beastmaster" 
+	"npc_dota_hero_beastmaster" 
 	{
 		"override_hero"   "npc_dota_hero_beastmaster"
 		"Model"						"models\creeps\roshan\roshan.mdl"	// Model.
@@ -20,6 +20,39 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+	"npc_dota_hero_chen" 
+	{
+		"override_hero"   			"npc_dota_hero_chen"
+		"Model"						"models\creeps\neutral_creeps\n_creep_forest_trolls\n_creep_forest_troll_high_priest.vmdl"	// Model.
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"spawn_small_camp"	// Ability 1.
+		"Ability2"					"spawn_medium_camp"			// Ability 2.
+		"Ability3"					"spawn_large_camp"			// Ability 3.
+		"Ability4"					"spawn_ancient_camp"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
+	"npc_dota_hero_wisp" 
+	{
+		"override_hero"   			"npc_dota_hero_wisp"
+		"Model"						"models/props_tree/tree_pinestatic_02.vmdl"	// Model.
+		"ModelScale"	"2"
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"furion_sprout"	// Ability 1.
+		"Ability2"					"furion_force_of_nature"			// Ability 2.
+		"Ability3"					"treant_eyes_in_the_forest"			// Ability 3.
+		"Ability4"					"treant_overgrowth"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
 
 	"npc_dota_hero_mirana" 
 	{
@@ -28,12 +61,13 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"pudge_meat_hook"	// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"mirana_meme_arrow"			// Ability 2.
+		"Ability3"					"mirana_meme_crit"			// Ability 3.
 		"Ability4"					"tinker_rearm"	// Ability 4.
 		"Ability5"					""		// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+
 }
