@@ -12,6 +12,13 @@ Everbody who submitted a hero gets a vote on their favourite for a few different
 
 This is all for fun, but just as a sweetener, any winner of a cateogry will also recieve 25 USD. 
 
+# How To Add a Hero:
+1. Create a new branch on this github, no need to fork, if you do not have contributor status just request it and it will be given.<br>
+![Alt Text](https://i.gyazo.com/5ca48db8fdfdbc17758cecfc9037927c.gif)<br>
+2. Its best to use sourcetree to clone this repistory to your local system, to clone, copy the url of this github and in sourcetree click FILE > CLONE. Choose a folder and it will start downloading, this will take a while.<br> 
+![Alt Text](https://i.gyazo.com/30b513c8946711ef8a97e93ac408838d.gif)<br>
+3. "Fetch" from origin to download the list of branches, and then checkout your branch, this makes it your working copy.
+ 
 ## Done Heros
 5 out of 112 <br>
 **Lich King** - Cookies <br>
