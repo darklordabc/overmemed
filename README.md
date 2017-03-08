@@ -6,10 +6,10 @@ Heroes can be based on any silly idea, this is a meme mod afterall, anything goe
 ## Done Heros
 2 out of 112 
 
-###Literally Dota IMBA - Mirana - by Firetoad<br>
 ###Radiant Jungle - Chen - Idea by Baumi, Implmentation by Yahnich
 ![alt tag](https://i.gyazo.com/81bea5f34049e0312dcdac2a3b7d2cc4.png)<br>
 ###Roshan - Beast Master
 ![alt tag](https://cloud.githubusercontent.com/assets/16277198/23677824/d20f1326-03d5-11e7-8201-caf0a503e967.png)<br>
+###Literally Dota IMBA - Mirana - by Firetoad<br>
 
 
