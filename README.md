@@ -29,8 +29,7 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **addon_english.txt:**<br> Here you add text to your new abilities, or if you are overriding, use the text strings of existing abilities and it will override their default texts.<br>
 ![Alt Text](https://i.gyazo.com/164f61892a51cf455d09aa7847628e70.png)<br><br>
 
-**5.** Create a dota 2 mod in the tools dlc, and copy the game and contents into their equivalents folder in steam, if you don't know how to do this, ask for help or check one of the tutorials on moddota. After copying, launch the mod and make sure everything works. Sourcetree should detect all the changes you have made, commit the changes and then push the changes to your new branch
-![Alt Text](https://i.gyazo.com/164f61892a51cf455d09aa7847628e70.png)<br><br>
+**5.** Create a dota 2 mod in the tools dlc, and copy the game and contents into their equivalents folder in steam, if you don't know how to do this, ask for help or check one of the tutorials on moddota. After copying, launch the mod and make sure everything works. Sourcetree should detect all the changes you have made, commit the changes and then push the changes to your new branch<br><br>
 **6.**  . And then from this github you can click pull requests, new pull request and make one from your branch to master. 
 ![Alt Text](https://i.gyazo.com/e700667d9888658bc86cc46e7bc303e5.gif)<br><br>
 
