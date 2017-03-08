@@ -17,9 +17,11 @@ end
 ---------------------------------------------------------------------------
 -- Required .lua files
 ---------------------------------------------------------------------------
-require( "events" )
-require( "items" )
-require( "utility_functions" )
+require("events")
+require("items")
+require("utility_functions")
+require("libraries/attachments")
+require("libraries/timers")
 
 ---------------------------------------------------------------------------
 -- Precache
@@ -34,26 +36,31 @@ function Precache( context )
 
 	--Cache the creature models
 		PrecacheUnitByNameSync( "npc_dota_creature_basic_zombie", context )
-        PrecacheModel( "npc_dota_creature_basic_zombie", context )
+		PrecacheModel( "npc_dota_creature_basic_zombie", context )
 
-        PrecacheUnitByNameSync( "npc_dota_creature_berserk_zombie", context )
-        PrecacheModel( "npc_dota_creature_berserk_zombie", context )
+		PrecacheUnitByNameSync( "npc_dota_creature_berserk_zombie", context )
+		PrecacheModel( "npc_dota_creature_berserk_zombie", context )
 
-        PrecacheUnitByNameSync( "npc_dota_treasure_courier", context )
-        PrecacheModel( "npc_dota_treasure_courier", context )
+		PrecacheUnitByNameSync( "npc_dota_treasure_courier", context )
+		PrecacheModel( "npc_dota_treasure_courier", context )
 
-    --Cache new particles
-       	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
-       	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
-       	PrecacheResource( "particle", "particles/last_hit/last_hit.vpcf", context )
-       	PrecacheResource( "particle", "particles/units/heroes/hero_zuus/zeus_taunt_coin.vpcf", context )
-       	PrecacheResource( "particle", "particles/addons_gameplay/player_deferred_light.vpcf", context )
-       	PrecacheResource( "particle", "particles/items_fx/black_king_bar_avatar.vpcf", context )
-       	PrecacheResource( "particle", "particles/treasure_courier_death.vpcf", context )
-       	PrecacheResource( "particle", "particles/econ/wards/f2p/f2p_ward/f2p_ward_true_sight_ambient.vpcf", context )
-       	PrecacheResource( "particle", "particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_bear_entangle_dust_cauldron.vpcf", context )
-       	PrecacheResource( "particle", "particles/newplayer_fx/npx_landslide_debris.vpcf", context )
-       	
+		-- Hero Precache
+		PrecacheUnitByNameSync("npc_dota_hero_necrolyte", context)
+		PrecacheUnitByNameSync("npc_dota_hero_warlock", context)
+		PrecacheUnitByNameSync("npc_dota_hero_winter_wyvern", context)
+
+	--Cache new particles
+		PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
+		PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
+		PrecacheResource( "particle", "particles/last_hit/last_hit.vpcf", context )
+		PrecacheResource( "particle", "particles/units/heroes/hero_zuus/zeus_taunt_coin.vpcf", context )
+		PrecacheResource( "particle", "particles/addons_gameplay/player_deferred_light.vpcf", context )
+		PrecacheResource( "particle", "particles/items_fx/black_king_bar_avatar.vpcf", context )
+		PrecacheResource( "particle", "particles/treasure_courier_death.vpcf", context )
+		PrecacheResource( "particle", "particles/econ/wards/f2p/f2p_ward/f2p_ward_true_sight_ambient.vpcf", context )
+		PrecacheResource( "particle", "particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_bear_entangle_dust_cauldron.vpcf", context )
+		PrecacheResource( "particle", "particles/newplayer_fx/npx_landslide_debris.vpcf", context )
+		
 	--Cache particles for traps
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_dragon_knight", context )
 		PrecacheResource( "particle_folder", "particles/units/heroes/hero_venomancer", context )
@@ -324,8 +331,8 @@ function COverthrowGameMode:UpdateScoreboard()
 			if entity:IsAlive() == true then
 				-- Attaching a particle to the leading team heroes
 				local existingParticle = entity:Attribute_GetIntValue( "particleID", -1 )
-       			if existingParticle == -1 then
-       				local particleLeader = ParticleManager:CreateParticle( "particles/leader/leader_overhead.vpcf", PATTACH_OVERHEAD_FOLLOW, entity )
+				if existingParticle == -1 then
+					local particleLeader = ParticleManager:CreateParticle( "particles/leader/leader_overhead.vpcf", PATTACH_OVERHEAD_FOLLOW, entity )
 					ParticleManager:SetParticleControlEnt( particleLeader, PATTACH_OVERHEAD_FOLLOW, entity, PATTACH_OVERHEAD_FOLLOW, "follow_overhead", entity:GetAbsOrigin(), true )
 					entity:Attribute_SetIntValue( "particleID", particleLeader )
 				end
@@ -357,8 +364,8 @@ function COverthrowGameMode:OnThink()
 	self:UpdateScoreboard()
 	-- Stop thinking if game is paused
 	if GameRules:IsGamePaused() == true then
-        return 1
-    end
+		return 1
+	end
 
 	if self.countdownEnabled == true then
 		CountdownTimer()
@@ -379,7 +386,7 @@ function COverthrowGameMode:OnThink()
 				}
 				CustomGameEventManager:Send_ServerToAllClients( "overtime_alert", broadcast_killcount )
 			end
-       	end
+		end
 	end
 	
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
@@ -446,24 +453,24 @@ end
 function spawnunits(campname)
 	local spawndata = spawncamps[campname]
 	local NumberToSpawn = spawndata.NumberToSpawn --How many to spawn
-    local SpawnLocation = Entities:FindByName( nil, campname )
-    local waypointlocation = Entities:FindByName ( nil, spawndata.WaypointName )
+	local SpawnLocation = Entities:FindByName( nil, campname )
+	local waypointlocation = Entities:FindByName ( nil, spawndata.WaypointName )
 	if SpawnLocation == nil then
 		return
 	end
 
-    local randomCreature = 
-    	{
+	local randomCreature = 
+		{
 			"basic_zombie",
 			"berserk_zombie"
-	    }
+		}
 	local r = randomCreature[RandomInt(1,#randomCreature)]
 	--print(r)
-    for i = 1, NumberToSpawn do
-        local creature = CreateUnitByName( "npc_dota_creature_" ..r , SpawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_NEUTRALS )
-        --print ("Spawning Camps")
-        creature:SetInitialGoalEntity( waypointlocation )
-    end
+	for i = 1, NumberToSpawn do
+		local creature = CreateUnitByName( "npc_dota_creature_" ..r , SpawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_NEUTRALS )
+		--print ("Spawning Camps")
+		creature:SetInitialGoalEntity( waypointlocation )
+	end
 end
 
 --------------------------------------------------------------------------------

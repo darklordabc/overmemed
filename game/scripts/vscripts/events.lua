@@ -61,6 +61,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 				eyes:SetHidden(false)
 			end
 		end
+		if spawnedUnit:GetName() == "npc_dota_hero_skeleton_king" then
+			SkeletonKingWearables(spawnedUnit)
+			print("Skeleton King picked!")
+		end
 		-- Destroys the last hit effects
 		local deathEffects = spawnedUnit:Attribute_GetIntValue( "effectsID", -1 )
 		if deathEffects ~= -1 then
@@ -76,6 +80,20 @@ function COverthrowGameMode:OnNPCSpawned( event )
 				ParticleManager:SetParticleControlEnt( particleSpawn, PATTACH_ABSORIGIN, spawnedUnit, PATTACH_ABSORIGIN, "attach_origin", spawnedUnit:GetAbsOrigin(), true )
 			end
 		end
+
+		-- List of innate abilities
+	local innate_abilities = {
+		"holdout_frostmourne_innate",	--Lich King Ability
+		"holdout_blue_effect"			--Lich King hero effect
+	}
+
+	-- Cycle through any innate abilities found, then upgrade them
+	for i = 1, #innate_abilities do
+		local current_ability = spawnedUnit:FindAbilityByName(innate_abilities[i])
+		if current_ability then
+			current_ability:SetLevel(1)
+		end
+	end
 	end
 end
 
