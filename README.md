@@ -13,8 +13,9 @@ Everbody who submitted a hero gets a vote on their favourite for a few different
 This is all for fun, but just as a sweetener, any winner of a cateogry will also recieve 25 USD. 
 
 ## Done Heros
-4 out of 112 
-
+5 out of 112 <br>
+**Lich King** - Cookies <br>
+![alt tag](https://i.gyazo.com/c8e6ba9ecdd0d48596f110bb66647b4b.png)<br>
 **Radiant Jungle** - Chen - Idea by Baumi, Implmentation by Yahnich<br>
 ![alt tag](https://i.gyazo.com/81bea5f34049e0312dcdac2a3b7d2cc4.png)<br>
 **Literally Dota IMBA** - Mirana - by Firetoad<br>
