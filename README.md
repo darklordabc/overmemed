@@ -23,7 +23,8 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **4.** Change the necessary files, these are the minimum files you will need to change, for a more complicated hero, you may need to add LUA scripts, custom particles, icons, etc, ask for help if you need it, however, in this mod its not necessary to have a complicated hero.<br><br>
 **herolist.txt:**<br> Enable the hero, this makes it appear in pick screen.<br>
 ![Alt Text](https://i.gyazo.com/33d44bf0be81269f52666ea2cb62d755.png)<br><br>
-**npc_abilities_custom.txt or npc_abilities_override.txt:**<br> If you are adding new abilities, use custom file, if you are changing the values of existing dota 2 abilities, use abilities_override.<br><br>
+**npc_abilities_custom.txt or npc_abilities_override.txt:**<br> If you are adding new abilities, use custom file, if you are changing the values of existing dota 2 abilities, use abilities_override.<br>
+![Alt Text](https://i.gyazo.com/83feb0481b302da9919ae34579c90e1a.png)<br><br>
 **npc_heroes_custom.txt:**<br> Here you pick a hero to override, and give it a new model if you want and change its base arrtibutes, also here is where you change their default abilities.<br> 
 ![Alt Text](https://i.gyazo.com/25b1720e55669aebef622c09194f919f.png)<br><br>
 **addon_english.txt:**<br> Here you add text to your new abilities, or if you are overriding, use the text strings of existing abilities and it will override their default texts.<br>
