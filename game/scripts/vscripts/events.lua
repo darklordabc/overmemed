@@ -55,6 +55,12 @@ end
 function COverthrowGameMode:OnNPCSpawned( event )
 	local spawnedUnit = EntIndexToHScript( event.entindex )
 	if spawnedUnit:IsRealHero() then
+		if spawnedUnit:GetName() == "npc_dota_hero_wisp" then
+			local eyes = spawnedUnit:FindAbilityByName("treant_eyes_in_the_forest")
+			if eyes then
+				eyes:SetHidden(false)
+			end
+		end
 		-- Destroys the last hit effects
 		local deathEffects = spawnedUnit:Attribute_GetIntValue( "effectsID", -1 )
 		if deathEffects ~= -1 then

@@ -36,5 +36,22 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+	"npc_dota_hero_wisp" 
+	{
+		"override_hero"   			"npc_dota_hero_wisp"
+		"Model"						"models/props_tree/tree_pinestatic_02.vmdl"	// Model.
+		"ModelScale"	"2"
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"furion_sprout"	// Ability 1.
+		"Ability2"					"furion_force_of_nature"			// Ability 2.
+		"Ability3"					"treant_eyes_in_the_forest"			// Ability 3.
+		"Ability4"					"treant_overgrowth"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
 
 }
