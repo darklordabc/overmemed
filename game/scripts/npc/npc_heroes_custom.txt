@@ -36,6 +36,30 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+
+	//=======================================================================================================
+	// HERO: Lich King (Skeleton King)
+	//=======================================================================================================
+	"npc_dota_hero_skeleton_king_holdout"
+	{
+		"override_hero"					"npc_dota_hero_skeleton_king"
+		"DisableWearables"				"1"
+		"Model"							"models/heroes/skeleton_king/skeleton_king.vmdl"
+		"ModelScale"					"1.2"
+		"AttackDamageMin"				"70"
+		"AttackDamageMax"				"80"
+		"HealthBarOffset"				"200"
+		"AttackRange"					"160"
+
+		"Ability1"						"holdout_death_coil_alt"
+		"Ability2"						"holdout_howling_blast"		
+		"Ability3"						"holdout_frozen_tempest"
+		"Ability4"						"holdout_icy_heartstopper"
+		"Ability5"						"holdout_frostmourne_innate"
+		"Ability6"						"holdout_sindragosa"
+		"Ability7"						"holdout_blue_effect"
+	}
+
 	"npc_dota_hero_wisp" 
 	{
 		"override_hero"   			"npc_dota_hero_wisp"
@@ -53,21 +77,4 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
-
-	"npc_dota_hero_mirana" 
-	{
-		"override_hero"   "npc_dota_hero_mirana"
-			
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"	// Ability 1.
-		"Ability2"					"mirana_meme_arrow"			// Ability 2.
-		"Ability3"					"mirana_meme_crit"			// Ability 3.
-		"Ability4"					"tinker_rearm"	// Ability 4.
-		"Ability5"					""		// Ability 5.
-		"Ability6"					""						// Ability 6 - Extra.
-		"Ability7"					""						// Ability 7 - Extra.
-		"Ability8"					""
-	}
-
 }
