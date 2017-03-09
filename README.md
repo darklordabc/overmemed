@@ -42,7 +42,7 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 ![alt tag](https://i.gyazo.com/6e3ea531c943d85820d92c777bb343f6.png)<br>
 **Lich King** - Cookies <br>
 ![alt tag](https://i.gyazo.com/c8e6ba9ecdd0d48596f110bb66647b4b.png)<br>
-**Radiant Jungle** - Chen - Idea by Baumi, Implmentation by Yahnich<br>
+**Radiant Jungle** - Chen - Idea by Baumi, Implementation by Yahnich<br>
 ![alt tag](https://i.gyazo.com/81bea5f34049e0312dcdac2a3b7d2cc4.png)<br>
 **Literally Dota IMBA** - Mirana - by Firetoad<br>
 ![alt tag](https://i.gyazo.com/8449555d7de4f1a59dab27504a504474.png)<br>
