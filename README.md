@@ -5,10 +5,10 @@ Heroes can be based on any silly idea, this is a meme mod afterall, anything goe
 
 # Winners: 
 Everbody who submitted a hero gets a vote on their favourite for a few different categories.<br>
-**Most Memey:** The hero that is best representative of meme overthrows custom games.<br>
-**Most Original:** The hero which is most unique in its origanality.<br>
-**Most Simple yet Effective:** The hero which is most very simple yet ingenious. <br>
-**Most Technically Challenging:** The hero which is most technically proficient.<br><br>
+**Most Memey:** The hero that is best representative of meme overthrow type custom games.<br>
+**Most Original:** The hero which is most unique..<br>
+**Most Simple yet Effective:** The hero which is the most very simple and ingenious. <br>
+**Most Technically Challenging:** The hero which is most technically impressive.<br><br>
 
 This is all for fun, but just as a sweetener, any winner of a category will also win **25 USD**. 
 
