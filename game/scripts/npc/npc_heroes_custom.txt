@@ -93,4 +93,20 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+
+	"npc_dota_hero_tinker" 
+	{
+		"override_hero"   "npc_dota_hero_tinker"
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dg_dagger"	// Ability 1.
+		"Ability2"					"dg_shallow_grave"			// Ability 2.
+		"Ability3"					"dg_roar"			// Ability 3.
+		"Ability4"					"dg_polish"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
 }
