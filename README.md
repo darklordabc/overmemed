@@ -10,7 +10,7 @@ Everbody who submitted a hero gets a vote on their favourite for a few different
 **Most Simple yet Effective:** The hero which is most very simple yet ingenious. <br>
 **Most Technically Challenging:** The hero which is most technically proficient.<br><br>
 
-This is all for fun, but just as a sweetener, any winner of a cateogry will also recieve 25 USD. 
+This is all for fun, but just as a sweetener, any winner of a category will also win **25 USD**. 
 
 # How To Add a Hero:
 I'm assuming most modders know this part, but if it helps anyone, than it will be worth writing it up.<br>
