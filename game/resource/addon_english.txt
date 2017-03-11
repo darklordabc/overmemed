@@ -69,11 +69,6 @@
 		"DOTA_Tooltip_ability_roshan_respawn_Note3"						"Credit for allies whose death was delayed will go to whoever struck the original killing blow."
 		"DOTA_Tooltip_ability_roshan_respawn_Note4"						"Roshan Delay affects Roshan's actual deaths, not Reincarnate deaths."
 		"DOTA_Tooltip_ability_roshan_respawn_reincarnate_time"				"REINCARNATION TIME:"
-		"DOTA_Tooltip_ability_roshan_respawn_movespeed"					"%MOVEMENT SLOW:"
-		"DOTA_Tooltip_ability_roshan_respawn_attackslow_tooltip"			"ATTACK SPEED SLOW:"
-		"DOTA_Tooltip_ability_roshan_respawn_slow_duration"				"SLOW DURATION:"
-		"DOTA_Tooltip_ability_roshan_respawn_scepter_duration"				"SCEPTER ALLY DEATH DELAY:"
-		"DOTA_Tooltip_ability_roshan_respawn_aura_radius_tooltip_scepter"					"SCEPTER DEATH DELAY RADIUS:"
 
 		"DOTA_Tooltip_ability_spawn_small_camp"								"Spawn Small Camp"
 		"DOTA_Tooltip_ability_spawn_small_camp_Description"					"Spawns a group of units, a small camp of creeps."

@@ -691,7 +691,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"240 140 40"
+		"AbilityCooldown"				"60 40 20"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -702,12 +702,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"reincarnate_time"		"3.0 3.0 3.0"
+				"reincarnate_time"		"10.0 10.0 10.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_radius"			"900"
+				"slow_radius"			"1"
 			}
 			"03"
 			{
@@ -717,27 +717,27 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attackslow_tooltip"	"-75"
+				"attackslow_tooltip"	"-1"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"5.0"
+				"slow_duration"			"1.0"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"scepter_duration"		"7"
+				"scepter_duration"		"1"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"	"1200"
+				"aura_radius"	"1"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius_tooltip_scepter"	"1200"
+				"aura_radius_tooltip_scepter"	"1"
 			}
 		}
 	}
