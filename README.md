@@ -38,6 +38,8 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 
 ## Done Heros
 6 out of 112 <br>
+**ArcHawk** - Bane <br>
+![alt tag](https://i.gyazo.com/b5d3e7379bafc583c57658fa1343210d.png)<br>
 **DG** - Tinker <br>
 ![alt tag](https://i.gyazo.com/6e3ea531c943d85820d92c777bb343f6.png)<br>
 **Lich King** - Cookies <br>
