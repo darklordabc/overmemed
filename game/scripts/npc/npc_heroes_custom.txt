@@ -109,4 +109,20 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+
+	"npc_dota_hero_bane" 
+	{
+		"override_hero"   "npc_dota_hero_bane"
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"ah_craggy_exterior"	// Ability 1.
+		"Ability2"					"ah_atrophy_aura"			// Ability 2.
+		"Ability3"					"ah_chen_test_of_faith_teleport"			// Ability 3.
+		"Ability4"					"ag_finish_rpg"	// Ability 4.
+		"Ability5"					"ah_tempest_double"		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
 }
