@@ -37,7 +37,7 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **For more examples, check the pull requests that have already been merged, they will show exactly what files need to be modified https://github.com/darklordabc/overmemed/pulls?q=is%3Apr+is%3Aclosed**
 
 ## Done Heros
-6 out of 112 <br>
+7 out of 112 <br>
 **ArcHawk** - Bane <br>
 ![alt tag](https://i.gyazo.com/b5d3e7379bafc583c57658fa1343210d.png)<br>
 **DG** - Tinker <br>
