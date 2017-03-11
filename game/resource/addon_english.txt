@@ -205,6 +205,35 @@
         "DOTA_TOOLTIP_ABILITY_dg_polish_agi"  "PERMANENT BONUS AGI / STR / INT:"
         "DOTA_TOOLTIP_ABILITY_dg_polish_gold_cost_toolip"  "<font color=\'#FFDD2C\'>GOLD COST:</font>"
 
+        "npc_dota_hero_bane"			"ArcHawk"
+        
+		"DOTA_Tooltip_ability_ah_tempest_double"		"Evade Ban"
+		"DOTA_Tooltip_ability_ah_tempest_double_Description"	"Spending his entire life in low priority and being banned from every community has made ArcHawk the master of creating sock pupppets to evade bans and the consqeunces of his outbursts."
+		"DOTA_Tooltip_ability_ah_tempest_double_Lore"		"'Did'nt we ban that guy already?'"
+		"DOTA_Tooltip_ability_ah_tempest_double_duration"	"DURATION:"
+
+		"DOTA_Tooltip_ability_ah_atrophy_aura"				"Autism Aura"
+		"DOTA_Tooltip_ability_ah_atrophy_aura_Description"	"ArcHawk's lack of self-awarness and basic social skills assaults nearby enemy player's psyche causing them lose attack damage."
+		"DOTA_Tooltip_ability_ah_atrophy_aura_Lore"			"'mumble mumble mumble'"
+		"DOTA_Tooltip_ability_ah_atrophy_aura_radius"		"RADIUS:"
+		"DOTA_Tooltip_ability_ah_atrophy_aura_damage_reduction_pct"		 "%DAMAGE REDUCTION:"
+
+		"DOTA_Tooltip_ability_ah_chen_test_of_faith_teleport"					"Drive Out"
+		"DOTA_Tooltip_ability_ah_chen_test_of_faith_teleport_Description"		"Focusing his unfortunte personality onto an individual player, AH can hound him out of the community."
+		"DOTA_Tooltip_ability_ah_chen_test_of_faith_teleport_Lore"				"'Trading BMD for AH? Worst Trade Deal Ever - Trump'"
+		"DOTA_Tooltip_ability_ah_chen_test_of_faith_teleport_hero_teleport_delay"	"HERO TP DELAY:"
+
+		"DOTA_Tooltip_ability_ag_finish_rpg"					"Actually Finish His Game"
+		"DOTA_Tooltip_ability_ag_finish_rpg_Description"		"If ArcHawk can do the impossible and actually finish his RPG, he will transcend his meme status and become godlike. Can only be cast inside the middle arena."
+		"DOTA_Tooltip_ability_ag_finish_rpg_Lore"		"'You can't be critized for your poorly coded custom game if you never release it' - Black guy pointing at his head"
+
+		"DOTA_Tooltip_ability_ah_craggy_exterior"										"Volatile"
+		"DOTA_Tooltip_ability_ah_craggy_exterior_Description"							"Any interaction with ArcHawk is a risk not worth its taking. Has a chance to ministun melee heros foolish enough to attack him."
+		"DOTA_Tooltip_ability_ah_craggy_exterior_Lore"								"ACCOUNT BUYERS REEE!"
+		"DOTA_Tooltip_ability_ah_craggy_exterior_Note0"								"The stun occur when an attack lands."
+		"DOTA_Tooltip_ability_ah_craggy_exterior_stun_chance"							"%CHANCE TO STUN:"
+		"DOTA_Tooltip_ability_ah_craggy_exterior_stun_duration"						"STUN DURATION:"
+
 
 	}
 }
