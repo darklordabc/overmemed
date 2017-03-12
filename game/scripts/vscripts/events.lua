@@ -84,7 +84,9 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		-- List of innate abilities
 	local innate_abilities = {
 		"holdout_frostmourne_innate",	--Lich King Ability
-		"holdout_blue_effect"			--Lich King hero effect
+		"holdout_blue_effect",			--Lich King hero effect
+		"mercy_angelic_descent",		-- Mercy innate passive
+		"mercy_guardian_angel"			-- Mercy innate movement ability
 	}
 
 	-- Cycle through any innate abilities found, then upgrade them
