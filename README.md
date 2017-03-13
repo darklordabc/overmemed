@@ -37,7 +37,9 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **For more examples, check the pull requests that have already been merged, they will show exactly what files need to be modified https://github.com/darklordabc/overmemed/pulls?q=is%3Apr+is%3Aclosed**
 
 ## Done Heros
-8 out of 112 <br>
+9 out of 112 <br>
+**FireToad** - Dragon Knight <br>
+![alt tag](https://i.gyazo.com/bbae36456abc9383b34ba7ca53cd0a5c.png)<br>
 **Mercy main, BTW** - Bane <br>
 ![alt tag](https://cdn.discordapp.com/attachments/250160069549883392/290672124903948290/74183068dcf64f27b81cba4380f672c6.png)<br>
 **ArcHawk** - Bane <br>
