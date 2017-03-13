@@ -167,9 +167,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"toad_breathe_fire"	// Ability 1.
-		"Ability2"					"toad_track"			// Ability 2.
+		"Ability2"					"toad_spell_amp"			// Ability 2.
 		"Ability3"					"toad_forge_spirit"			// Ability 3.
-		"Ability4"					"toad_spell_amp"	// Ability 4.
+		"Ability4"					"toad_track"	// Ability 4.
 		"Ability5"					"toad_blade"		// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
 		"Ability7"					""						// Ability 7 - Extra.
