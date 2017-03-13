@@ -1,0 +1,159 @@
+"Overmemed.MiranaMemeCrit"
+{
+	"operator_stacks"
+	{
+		"update_stack"
+		{
+			"reference_operator"
+			{
+				"operator"				"sos_reference_stack"
+				"reference_stack"		"dota_update_default"
+				"operator_variables"
+				{
+					"vsnd_files"
+					{
+						"value"
+						{
+							"value0"    "sounds/hero/imba/fatality.vsnd"
+						}
+					}
+					"volume"			{   "value"     "5.000000"  }
+					"pitch_rand_min"	{   "value"     "-0.03000"  }
+					"pitch_rand_max"	{   "value"     "0.030000"  }
+					"pitch"				{   "value"     "1.000000"  }
+					"soundlevel"		{   "value"     "100.00000" }
+					"distance_max"		{   "value"     "20000.0"  }
+					"event_type"		{   "value"     "1.000000"  }
+				}
+			}
+		}
+	}
+}
+
+"Overmemed.CaduceusLaunch"
+{
+	"operator_stacks"
+	{
+		"update_stack"
+		{
+			"reference_operator"
+			{
+				"operator"				"sos_reference_stack"
+				"reference_stack"		"dota_update_default"
+				"operator_variables"
+				{
+					"vsnd_files"
+					{
+						"value"
+						{
+							"value0"    "sounds/weapons/hero/skywrath/concussive_shot_cast.vsnd"
+						}
+					}
+					"volume"			{   "value"     "0.400000"  }
+					"pitch_rand_min"	{   "value"     "-0.03000"  }
+					"pitch_rand_max"	{   "value"     "0.030000"  }
+					"pitch"				{   "value"     "2.000000"  }
+					"soundlevel"		{   "value"     "100.00000" }
+					"distance_max"		{   "value"     "2500.000"  }
+					"event_type"		{   "value"     "1.000000"  }
+				}
+			}
+		}
+	}
+}
+
+"Overmemed.CaduceusHealHit"
+{
+	"operator_stacks"
+	{
+		"update_stack"
+		{
+			"reference_operator"
+			{
+				"operator"				"sos_reference_stack"
+				"reference_stack"		"dota_update_default"
+				"operator_variables"
+				{
+					"vsnd_files"
+					{
+						"value"
+						{
+							"value0"    "sounds/weapons/hero/omniknight/purification.vsnd"
+						}
+					}
+					"volume"			{   "value"     "0.300000"  }
+					"pitch_rand_min"	{   "value"     "-0.03000"  }
+					"pitch_rand_max"	{   "value"     "0.030000"  }
+					"pitch"				{   "value"     "3.000000"  }
+					"soundlevel"		{   "value"     "100.00000" }
+					"distance_max"		{   "value"     "2500.000"  }
+					"event_type"		{   "value"     "1.000000"  }
+				}
+			}
+		}
+	}
+}
+
+"Overmemed.CaduceusPowerHit"
+{
+	"operator_stacks"
+	{
+		"update_stack"
+		{
+			"reference_operator"
+			{
+				"operator"				"sos_reference_stack"
+				"reference_stack"		"dota_update_default"
+				"operator_variables"
+				{
+					"vsnd_files"
+					{
+						"value"
+						{
+							"value0"    "sounds/weapons/hero/ogre_magi/bloodlust_target.vsnd"
+						}
+					}
+					"volume"			{   "value"     "0.300000"  }
+					"pitch_rand_min"	{   "value"     "-0.03000"  }
+					"pitch_rand_max"	{   "value"     "0.030000"  }
+					"pitch"				{   "value"     "4.000000"  }
+					"soundlevel"		{   "value"     "100.00000" }
+					"distance_max"		{   "value"     "2500.000"  }
+					"event_type"		{   "value"     "1.000000"  }
+				}
+			}
+		}
+	}
+}
+
+"Overmemed.GuardianAngel"
+{
+	"operator_stacks"
+	{
+		"update_stack"
+		{
+			"reference_operator"
+			{
+				"operator"				"sos_reference_stack"
+				"reference_stack"		"dota_update_default"
+				"operator_variables"
+				{
+					"vsnd_files"
+					{
+						"value"
+						{
+							"value0"    "sounds/weapons/hero/faceless_void/time_walk.vsnd"
+						}
+					}
+					"volume"			{   "value"     "0.700000"  }
+					"pitch_rand_min"	{   "value"     "-0.03000"  }
+					"pitch_rand_max"	{   "value"     "0.030000"  }
+					"pitch"				{   "value"     "2.000000"  }
+					"soundlevel"		{   "value"     "100.00000" }
+					"distance_max"		{   "value"     "2500.000"  }
+					"event_type"		{   "value"     "1.000000"  }
+				}
+			}
+		}
+	}
+}

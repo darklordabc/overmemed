@@ -24,6 +24,11 @@ require("libraries/attachments")
 require("libraries/timers")
 
 ---------------------------------------------------------------------------
+-- Lua modifier registration
+---------------------------------------------------------------------------
+LinkLuaModifier("modifier_mercy_caduceus_power", "heroes/mercy/modifier_mercy_caduceus_power.lua", LUA_MODIFIER_MOTION_NONE )
+
+---------------------------------------------------------------------------
 -- Precache
 ---------------------------------------------------------------------------
 function Precache( context )

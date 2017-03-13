@@ -94,6 +94,39 @@
 		"Ability8"					""
 	}
 
+	"npc_dota_hero_skywrath_mage" 
+	{
+		"override_hero"		"npc_dota_hero_skywrath_mage"
+
+		"ArmorPhysical"					"-1"
+		"AttackDamageMin"				"1"
+		"AttackDamageMax"				"3"
+		"AttackRate"					"1.0"
+		"AttackAcquisitionRange"		"1200"
+		"AttackRange"					"1000"
+		"ProjectileSpeed"				"2000"
+		"AttributeBaseStrength"			"12"
+		"AttributeStrengthGain"			"1.5"
+		"AttributeBaseAgility"			"10"
+		"AttributeAgilityGain"			"1.0"
+		"AttributeBaseIntelligence"		"25"
+		"AttributeIntelligenceGain"		"2.5"
+		"MovementSpeed"					"335"
+		"MovementTurnRate"				"1.0"
+		"StatusHealthRegen"				"0.0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"mercy_caduceus_healing"
+		"Ability2"					"mercy_caduceus_power"
+		"Ability3"					"bounty_hunter_jinada"
+		"Ability4"					"mercy_guardian_angel"
+		"Ability5"					"mercy_angelic_descent"
+		"Ability6"					"mercy_heroes_never_die"
+		"Ability7"					""
+		"Ability8"					""
+	}
+
 	"npc_dota_hero_tinker" 
 	{
 		"override_hero"   "npc_dota_hero_tinker"

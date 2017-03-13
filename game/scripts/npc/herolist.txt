@@ -86,7 +86,7 @@
 	"npc_dota_hero_nevermore"			"0"
 	"npc_dota_hero_shadow_shaman"		"0"
 	"npc_dota_hero_silencer"			"0"
-	"npc_dota_hero_skywrath_mage"		"0"
+	"npc_dota_hero_skywrath_mage"		"1"
 	"npc_dota_hero_slardar"				"0"
 	"npc_dota_hero_slark"				"0"
 	"npc_dota_hero_sniper"				"0"

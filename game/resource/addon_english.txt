@@ -1,4 +1,4 @@
-﻿"lang"
+"lang"
 {
 	"Language"		"English"
 	"Tokens"
@@ -58,6 +58,7 @@
 		"npc_dota_hero_wisp"			"Its a Tree"
 		"npc_dota_hero_mirana"			"Literally Dota IMBA"
 		"npc_dota_hero_tinker"			"DG"
+		"npc_dota_hero_skywrath_mage"	"Mercy main, BTW"
 
 		"DOTA_Tooltip_ability_roshan_respawn"								"Roshan Reincarnation"
 		"DOTA_Tooltip_ability_roshan_respawn_Description"					"Roshan form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius will be slowed.\n\nUpgradable by Aghanim's Scepter."
@@ -229,6 +230,55 @@
 		"DOTA_Tooltip_ability_ah_craggy_exterior_stun_chance"							"%CHANCE TO STUN:"
 		"DOTA_Tooltip_ability_ah_craggy_exterior_stun_duration"						"STUN DURATION:"
 
+		//------------------------------------------------------------------------------------------------------------------------------
+		// Mercy main, BTW
+		//------------------------------------------------------------------------------------------------------------------------------
+
+		"DOTA_Tooltip_ability_mercy_caduceus_healing"							"Caduceus Staff: Healing"
+		"DOTA_Tooltip_ability_mercy_caduceus_healing_Description"				"Shoots a healing beam that heals the first ally it hits, then grants it max health-based regeneration for %heal_duration% seconds. Stacks with itself."
+		"DOTA_Tooltip_ability_mercy_caduceus_healing_Lore"						"Stop fucking getting killed u fucks fucking noob team SMH."
+		"DOTA_Tooltip_ability_mercy_caduceus_healing_instant_heal"				"HEAL:"
+		"DOTA_Tooltip_ability_mercy_caduceus_healing_heal_per_sec"				"%HEALTH REGENERATION:"
+
+		"DOTA_Tooltip_modifier_mercy_caduceus_healing_regen"					"Caduceus Healing"
+		"DOTA_Tooltip_modifier_mercy_caduceus_healing_regen_Description"		"Regenerating health over time."
+
+		"DOTA_Tooltip_ability_mercy_caduceus_power"								"Caduceus Staff: Power"
+		"DOTA_Tooltip_ability_mercy_caduceus_power_Description"					"Shoots a beam that empowers the first ally it hits, granting them bonus damage and spell damage amplification for %power_duration% seconds. Stacks with itself."
+		"DOTA_Tooltip_ability_mercy_caduceus_power_Lore"						"Jesus fucking christ on a fucking stick you fucking retards couldn't fucking shoot your way out of a fucking wet paperbag, fuck."
+		"DOTA_Tooltip_ability_mercy_caduceus_power_bonus_damage"				"%BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_mercy_caduceus_power_bonus_spell_damage"			"%BONUS SPELL AMPLIFY:"
+
+		"DOTA_Tooltip_modifier_mercy_caduceus_power"							"Caduceus Power"
+		"DOTA_Tooltip_modifier_mercy_caduceus_power_Description"				"Attack and spell damage increased."
+
+		"DOTA_Tooltip_ability_bounty_hunter_jinada"								"Caduceus Blaster"
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_Description"					"Causes your next attack to do a surprising amount of damage, crippling the target temporarily."
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_Lore"						"Only true Mercy mains know exactly how surprising her pistol's damage is."
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_crit_multiplier"				"%DAMAGE:"
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_bonus_movespeed"				"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_bonus_attackspeed"			"ATTACK SLOW:"
+		"DOTA_Tooltip_ability_bounty_hunter_jinada_duration"					"SLOW DURATION:"
+
+		"DOTA_Tooltip_modifier_bounty_hunter_jinada_slow"						"Caduceus Blaster"
+
+		"DOTA_Tooltip_ability_mercy_guardian_angel"								"Guardian Angel"
+		"DOTA_Tooltip_ability_mercy_guardian_angel_Description"					"Swoops to an ally's position in order to provide them with support."
+		"DOTA_Tooltip_ability_mercy_guardian_angel_Lore"						"CAN YOU FUCKS GET AWAY FROM THE FUCKING PAYLOAD AND START PROTECTING ME JESUS FUCK WHAT A TEAM OF BADS."
+
+		"DOTA_Tooltip_ability_mercy_angelic_descent"							"Angelic Descent"
+		"DOTA_Tooltip_ability_mercy_angelic_descent_Description"				"Grants high passive health regeneration."
+		"DOTA_Tooltip_ability_mercy_angelic_descent_Lore"						"Mercy's body is frail, and her health, lacking, but she can recover from any injury surprisingly fast."
+		"DOTA_Tooltip_ability_mercy_angelic_descent_base_regen"					"BASE REGEN:"
+		"DOTA_Tooltip_ability_mercy_angelic_descent_regen_per_level"			"REGEN PER LEVEL:"
+
+		"DOTA_Tooltip_ability_mercy_heroes_never_die"							"Heroes Never Die"
+		"DOTA_Tooltip_ability_mercy_heroes_never_die_Description"				"Fully heals all nearby allies, then grants them %heal_over_time%%% health regeneration per second and %damage_reduction_tooltip%%% incoming damage reduction for %duration% seconds. Using this ability causes you to be disabled and invulnerable for its duration."
+		"DOTA_Tooltip_ability_mercy_heroes_never_die_Lore"						"Except you fucks. You die all the fucking time, you fucking fucktard hero wannabes! Come here and fucking protect me, or I'll never heal you sorry little asses again! Fucking shit team."
+		"DOTA_Tooltip_ability_mercy_heroes_never_die_effect_radius"				"EFFECT RADIUS:"
+
+		"DOTA_Tooltip_modifier_mercy_heroes_never_die_allies"					"Heroes Never Die"
+		"DOTA_Tooltip_modifier_mercy_heroes_never_die_allies_Description"		"Regenerating health and ignoring part of incoming damage."
 
 	}
 }
