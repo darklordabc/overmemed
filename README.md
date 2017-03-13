@@ -38,6 +38,8 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 
 ## Done Heros
 7 out of 112 <br>
+**Mercy main, BTW** - Bane <br>
+![alt tag](https://cdn.discordapp.com/attachments/250160069549883392/290672124903948290/74183068dcf64f27b81cba4380f672c6.png)<br>
 **ArcHawk** - Bane <br>
 ![alt tag](https://i.gyazo.com/b5d3e7379bafc583c57658fa1343210d.png)<br>
 **DG** - Tinker <br>
