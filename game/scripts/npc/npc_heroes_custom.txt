@@ -176,4 +176,54 @@
 		"Ability8"					""
 
 	}
+	
+	// ==Robbie Rotten==
+	// blame Robbit Rotten
+	"npc_dota_hero_robbie_rotten" 
+	{
+		"override_hero"   "npc_dota_hero_invoker"
+		
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"11"									// Damage range min.
+		"AttackDamageMax"			"11"									// Damage range max.
+		"ProjectileModel"                "particles/units/heroes/hero_venomancer/veno_tnt_banana.vpcf"
+		"ProjectileSpeed"               "3000"
+	
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"			"20"									// Base strength
+		"AttributeStrengthGain"			"1.7"									// Strength bonus per level.
+		"AttributeBaseIntelligence"		"20"									// Base intelligence
+		"AttributeIntelligenceGain"		"2.0"									// Intelligence bonus per level.
+		"AttributeBaseAgility"			"41"									// Base agility
+		"AttributeAgilityGain"			"2.6"									// Agility bonus per level.
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"				"310"									// Speed.
+		"MovementTurnRate"			"0.9"									// Turning rate.
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"robbie_net"	// Ability 1.
+		"Ability2"					"robbie_banana"			// Ability 2.
+		"Ability3"					"robbie_sneak"			// Ability 3.
+		"Ability4"					"robbie_summon"	// Ability 4.
+		"Ability5"					""		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					"" // Abilities 10-17 are talent slots.
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		"Ability16"					""
+		"Ability17"					""
+	}
 }
