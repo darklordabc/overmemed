@@ -3628,6 +3628,7 @@
 			{
 				"Passive"			"1"
 				"Isbuff"			"1"
+				"IsHidden"					"1"
 
 				"EffectName" "particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
 				"EffectAttachType" "follow_origin"
@@ -3640,6 +3641,8 @@
 
 			"heal_aura_effect"
 			{
+				"IsHidden"					"0"
+				"TextureName"				"custom/ambulance_regen"
 			    "Properties" 
 			    {
 			        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%aura_heal"
@@ -3648,6 +3651,7 @@
 
 			"modifier_ms_aura"
 			{
+				"IsHidden"					"1"
 				"Passive"			"1"
 				"Isbuff"			"1"
 
@@ -3664,6 +3668,8 @@
 
 			"ms_aura_effect"
 			{
+				"IsHidden"					"0"
+				"TextureName"				"custom/ambulance_ms"
 			    "Properties" 
 			    {
 			        "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%aura_ms"
@@ -3674,6 +3680,7 @@
 			{
 				"Passive"			"1"
 				"ThinkInterval"       "1.0"
+				"IsHidden"					"1"
 
 				"OnIntervalThink"
 				{
