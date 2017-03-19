@@ -3743,4 +3743,358 @@
 			}
 		}
 	}
+
+	// ==LOOK AT THIS NET THAT I JUST FOUND==
+	// blame Cool Robbit
+	"robbie_net"
+	{
+	    // General
+	    //-------------------------------------------------------------------------------------------------------------
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+	    "AbilityTextureName"            "meepo_earthbind"
+		"AbilityCastAnimation"          "ACT_DOTA_CAST_COLD_SNAP"
+	
+	    // Precache
+	    //-------------------------------------------------------------------------------------------------------------
+	    "precache"
+	    {
+	        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
+			"particle"           "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf"
+	        "particle"           "particles/units/heroes/hero_meepo/meepo_earthbind.vpcf"       
+	    }
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "800"
+	    "AbilityCastPoint"              "0.1"
+	    
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "5.0 4.0 3.0 2.0"
+	
+	    // Damage.
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityDamage"                 "0 0 0 0"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "20 20 20 20"
+	
+	    // Special
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "net_speed"   "900"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "root_duration"    "2.0"
+	        }
+			"03"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"failure_chance"      "50 35 25 20"
+			}
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "Hero_Meepo.Earthbind.Cast"
+	            "Target"        "CASTER"
+	        }
+	        "Random"
+			{
+				"Chance"    "%failure_chance"
+				"OnSuccess" //On "success", throw a net at a random target nearby, friend or enemy. This means the failure chance procced.
+				{
+					"TrackingProjectile"
+					{
+						"Target"
+						{
+							"Center"    "CASTER"
+							"Radius"    "800"
+							"Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+							"Types"     "DOTA_UNIT_TARGET_ALL"
+							"ExcludeTypes"    "DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_COURIER | DOTA_UNIT_TARGET_TREE"
+							"MaxTargets"    "1"
+							"Random"    "1"
+						}
+						"EffectName"        "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf"
+						"Dodgeable"         "1"
+						"ProvidesVision"    "1"
+						"MoveSpeed"         "%net_speed"
+						"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+					}
+				}
+				"OnFailure"
+				{
+					"TrackingProjectile"
+					{
+						"Target"            "TARGET"
+						"EffectName"        "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf"
+						"Dodgeable"         "1"
+						"ProvidesVision"    "1"
+						"MoveSpeed"         "%net_speed"
+						"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+					}
+				}
+			}
+	    }
+	
+	    "OnProjectileHitUnit"
+	    {
+	        "DeleteOnHit"   "1"
+	        "FireSound"
+	        {
+	            "EffectName"    "Hero_Meepo.Earthbind.Target"
+	            "Target"        "TARGET"
+	        }
+	        
+	       "ApplyModifier"
+			{
+				"ModifierName"  "modifier_robbie_net"
+				"Target"        "TARGET"
+				"Duration"      "%root_duration"
+			}                 
+	    }   
+		
+		"Modifiers"
+	    {
+	        "modifier_robbie_net"
+	        {
+	            "Passive"           "0"
+	            "IsHidden"          "0"
+	            "IsDebuff"          "1"
+				"IsPurgable"       "1"
+	
+	            "EffectName"            "particles/units/heroes/hero_meepo/meepo_earthbind.vpcf"
+				"EffectAttachType"    "follow_origin"
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"     "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+				}         
+	        }
+		}
+	}
+	
+	// ==THEY'LL SLIP AND SLIDE ON THIS BANANA PEEL==
+	// blame Cool Robbit
+	
+	"robbie_banana"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"		    "SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"venomancer_plague_ward"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+			"particle"					"particles/units/heroes/hero_monkey_king/monkey_king_taunt_bananas.vpcf"
+		}
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slip_chance"				"14 17 20 25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"self_slip_chance"		"20 17 14 12"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slip_duration"		    "0.35"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_robbie_banana"
+			{
+				"Passive"					"1"
+				"IsHidden"					"1"
+				"IsPurgable"              "0"
+	
+				"OnAttackLanded"
+				{
+					"Random"
+					{
+						"Chance" "%slip_chance"
+						"OnSuccess"
+						{
+							"FireSound"
+							{
+								"EffectName"    "Hero_Brewmaster.DrunkenHaze.Cast"
+								"Target"        "TARGET"
+							}
+							"Knockback"
+							{
+								"Target"              "TARGET"
+								"Center"             "CASTER"
+								"Duration"           "%slip_duration"
+								"Distance"           "100"
+								"Height"              "50"
+								"IsFixedDistance" "0"
+								"ShouldStun"       "0"
+							}
+						}
+					}
+					"Random"
+					{
+						"Chance" "%self_slip_chance"
+						"OnSuccess"
+						{
+							"FireSound"
+							{
+								"EffectName"    "Hero_Brewmaster.DrunkenHaze.Cast"
+								"Target"        "ATTACKER"
+							}
+							"Knockback"
+							{
+								"Target"              "ATTACKER"
+								"Center"             "TARGET"
+								"Duration"           "%slip_duration"
+								"Distance"           "100"
+								"Height"              "50"
+								"IsFixedDistance" "0"
+								"ShouldStun"       "0"
+							}
+							"AttachEffect"
+							{
+								"Target" "ATTACKER"
+								"EffectName" "particles/units/heroes/hero_monkey_king/monkey_king_taunt_bananas.vpcff"
+								"EffectAttachType" "follow_origin"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	// ==JUST FOLLOW MY MOVES, AND SNEAK AROUND==
+	// blame Cool Robbit
+	"robbie_sneak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"                        "heroes/robbie_rotten/robbie_sneak"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"clinkz_wind_walk"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			//"soundfile"					"soundevents/game_sounds_heroes/game_sounds_treant.vsndevts"
+			//"particle"					"particles/generic_hero_status/status_invisibility_start.vpcf"
+		}
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"sneak_delay"		    "5 4 3 2"
+			}
+		}
+	}
+	
+	// ==BA BA BA BA WE ARE NUMBER ONE==
+	// blame Cool Robbit
+	"robbie_summon"
+	{
+		"AbilityType"                     "DOTA_ABILITY_TYPE_ULTIMATE"
+	    "BaseClass"                      "ability_datadriven"
+	    "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"               "0.7"
+	    "AbilityCooldown"               "90 70 50"
+	    "AbilityManaCost"               "111"
+		"AbilityTextureName"			"invoker_ghost_walk"
+		"AbilityCastAnimation"          "ACT_DOTA_VICTORY"
+		
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/robbie.vsndevts"
+			//"particle"					"particles/units/heroes/hero_monkey_king/monkey_king_taunt_bananas.vpcf"
+		}
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"                          "FIELD_FLOAT"
+	            "illusion_duration"               "30"
+	        }
+			"02"
+			{
+				"var_type"                         "FIELD_INTEGER"
+				"illusion_count"                   "3"
+			}
+	        "03"
+	        {
+	            "var_type"                          "FIELD_FLOAT"
+	            "illusion_outgoing_damage"          "0.0"       
+	        }
+	        "04"
+	        {
+	            "var_type"                          "FIELD_FLOAT"
+	            "illusion_outgoing_tooltip"         "100.0"
+	        }
+	        "05"
+	        {
+	            "var_type"                          "FIELD_FLOAT"
+	            "illusion_incoming_damage"          "100.0"
+	        }
+	        "06"
+	        {
+	            "var_type"                          "FIELD_FLOAT"
+	            "illusion_incoming_tooltip"            "200.0"
+	        }               
+	    }
+		
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"    "Robbie.NumberOne"
+	            "Target"        "CASTER"
+	        }
+	        "RunScript"
+	        {
+	            "ScriptFile"        "heroes/robbie_rotten/illusion_assist.lua"
+	            "Function"         "HireVillains"
+	        }
+	    }
+	}
+
 }
