@@ -3635,6 +3635,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"	"custom/tinker_march_of_the_machines_baumi"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -3643,7 +3644,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35.0 35.0 35.0 35.0"
+		"AbilityCooldown"				"60"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -3653,6 +3654,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"145 150 165 190"
 
+		"precache"
+		{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+		"particle"					"particles/units/heroes/hero_tinker/tinker_machine.vpcf"
+		}
+
+		
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -3660,7 +3669,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"900"
+				"radius"				"2000"
 			}
 			"02"
 			{
@@ -3675,27 +3684,27 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"6.0"
+				"duration"				"30.0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"					"400 400 400 400"
+				"speed"					"100 100 100 100"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"machines_per_sec"		"24"
+				"machines_per_sec"		"5"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"distance"				"1800"
+				"distance"				"4000"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"distance_scepter"		"1800"
+				"distance_scepter"		"4000"
 			}
 		}
 	}
