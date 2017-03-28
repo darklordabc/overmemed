@@ -3270,10 +3270,487 @@
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%spell_amp"
 				}
 			}
-
 		}
 	}
-	
+
+	"kotl_lightswitch"
+	{
+	    // General  
+	    // ----------------------------------------------------------------------------------------
+	    "BaseClass"              "ability_datadriven"
+	    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_TOGGLE"
+	    "AbilityTextureName"     "custom/kotl_lightswitch"
+	    "AbilityManaCost"        "0"
+
+	    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+	    "MaxLevel"               "4"
+
+	    "AbilityCastPoint"       "0.0"
+
+	    "AbilitySpecial"
+	    {
+	    	"01"
+	    	{
+	    		"var_type"			"FIELD_INTEGER"
+	    		"bonus_strength"			"0 5 10 15"
+	    	}
+	    }
+
+	    "OnToggleOn"
+	    {
+	     "RunScript"
+	               {
+	                    "ScriptFile"    "heroes/hero_kotl/lightswitch.lua"
+	                    "Function"        "toggleOn"
+	               }
+	    }
+	    
+	    "OnToggleOff"
+	    {
+	      "RunScript"
+	               {
+	                    "ScriptFile"    "heroes/hero_kotl/lightswitch.lua"
+	                    "Function"        "toggleOff"
+	               }
+	    }
+
+	    "Modifiers"
+	    {
+	    	"modifier_bonus_strength"
+	    	{
+	    		"Passive"			"1"
+	    		"IsHidden"			"1"
+	    		"IsBuff"			"1"
+	    
+	    		"Properties"
+	    		{
+	    			"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
+	    		}
+	    	}
+	    }
+	}
+
+
+	"kotl_illuminati"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"custom/kotl_illuminati"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+			"particle"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate.vpcf"
+			"particle"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf"
+			"particle"  		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf"
+			"particle"  		"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+		"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 160 170 180"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_second"		"100.0 100.0 100.0 100.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"350 350 350 350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"					"1550"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"speed"					"1050.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_channel_time"		"2.0 3.0 4.0 5.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"800 800 800 800"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"vision_duration"		"3.34 3.34 3.34 3.34"
+			}
+			"08"
+			{	
+				"var_type"				"FIELD_INTEGER"
+				"channel_vision_radius"	"350"
+			}
+			"09"
+			{	
+				"var_type"					"FIELD_FLOAT"
+				"channel_vision_interval"	"0.5"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"channel_vision_duration"	"10.34"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"channel_vision_step"		"150"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"heal_per_second"		"100.0 100.0 100.0 100.0"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Charge"
+				"Target" 		"CASTER"
+			}
+			
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"IlluminateStart"
+				"sub_ability_name"	"kotl_illuminati_end"
+			}
+
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_illuminate_vision_field_timer_datadriven"
+				"Target" 		"CASTER"
+			}				
+		}
+
+		"OnUpgrade"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"LevelUpAbility"
+				"ability_name"	"kotl_illuminati_end"
+			}
+		}
+
+		"OnChannelFinish"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Discharge"
+				"Target" 		"CASTER"
+			}
+			
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"IlluminateEnd"
+				"projectile_name"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"IlluminateSwapEnd"
+				"sub_ability_name"	"kotl_illuminati_end"
+			}
+
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_illuminate_vision_field_timer_datadriven"
+				"Target" 		"CASTER"
+			}		
+		}
+
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+			"FireSound"
+			{
+				"EffectName"	"Hero_KeeperOfTheLight.Illuminate.Target"
+				"Target" 		"TARGET"
+			}
+			
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"IlluminateProjectileHit"
+			}		
+		}
+		
+		
+		
+		"Modifiers"
+		{
+			"modifier_illuminate_vision_field_timer_datadriven"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+				"IsPurgable"		"0"
+
+				"EffectName"		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf"
+				"EffectAttachType"	"attach_attack1"
+		
+				"ThinkInterval"  "%channel_vision_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+						"Function"		"IlluminateVisionFields"
+					}				
+				}			
+			}		
+		}	
+	}
+
+
+	"kotl_illuminati_end"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityTextureName"			"keeper_of_the_light_illuminate_end"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/illuminati.lua"
+				"Function"		"IlluminateStop"
+			}
+		}	
+	}
+
+	"kotl_ambulance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityTextureName"			"custom/ambulance"
+
+		"AbilityCastRange"          "750 900 1050 1200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		  "01"
+		  {
+		    "var_type"          "FIELD_INTEGER"
+		    "aura_radius"       "750 900 1050 1200"
+		  }
+		  "02"
+		  {
+		    "var_type"          "FIELD_FLOAT"
+		    "aura_heal"       "2 3 4 5" 
+		  }
+		  "03"
+		  {
+		    "var_type"          "FIELD_INTEGER"
+		    "aura_ms"      "20 40 60 80"
+		  }
+		}
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"  		"particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
+			"particle"  		"particles/econ/courier/courier_platinum_roshan/platinum_roshan_ambient.vpcf"
+		}
+
+		"OnUpgrade"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/ambulance.lua"
+				"Function"		"AmbulanceUpdate"
+
+				"modifier_heal_aura"       "modifier_heal_aura"
+				"modifier_ms_aura"       "modifier_ms_aura"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_heal_aura"
+			{
+				"Passive"			"1"
+				"Isbuff"			"1"
+				"IsHidden"					"1"
+
+				"EffectName" "particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
+				"EffectAttachType" "follow_origin"
+		
+				"Aura"        "heal_aura_effect"
+				"Aura_Radius" "%aura_radius"
+				"Aura_Teams"  "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"  "DOTA_UNIT_TARGET_HERO"
+			}
+
+			"heal_aura_effect"
+			{
+				"IsHidden"					"0"
+				"TextureName"				"custom/ambulance_regen"
+			    "Properties" 
+			    {
+			        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%aura_heal"
+			    }
+			}
+
+			"modifier_ms_aura"
+			{
+				"IsHidden"					"1"
+				"Passive"			"1"
+				"Isbuff"			"1"
+
+				"EffectName" "particles/econ/courier/courier_platinum_roshan/platinum_roshan_ambient.vpcf"
+				"EffectAttachType" "follow_origin"
+			
+				"Aura"        "ms_aura_effect"
+				"Aura_Radius" "%aura_radius"
+				"Aura_Teams"  "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"  "DOTA_UNIT_TARGET_HERO"
+
+
+			}
+
+			"ms_aura_effect"
+			{
+				"IsHidden"					"0"
+				"TextureName"				"custom/ambulance_ms"
+			    "Properties" 
+			    {
+			        "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%aura_ms"
+			    }
+			}
+
+			"modifier_thinker"
+			{
+				"Passive"			"1"
+				"ThinkInterval"       "1.0"
+				"IsHidden"					"1"
+
+				"OnIntervalThink"
+				{
+				  "RunScript"
+				  {
+				    "ScriptFile"    "heroes/hero_kotl/ambulance.lua"
+				    "Function"      "AmbulanceUpdate"
+
+				    "modifier_heal_aura"       "modifier_heal_aura"
+				    "modifier_ms_aura"       "modifier_ms_aura"
+				  }
+				}
+			}
+		}	
+	}
+
+	"kotl_holylight"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityTextureName"			"custom/light"
+
+		"AbilityManaCost"				"100 150 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		  "01"
+		  {
+		    "var_type"          "FIELD_INTEGER"
+		    "duration"       "10 15 20"
+		  }
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_kotl/holylight.lua"
+				"Function"		"Allvision"
+
+				"modifier_allvision" "modifier_allvision"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_allvision"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsBuff"			"1"
+				"Duration"          "%duration"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BONUS_DAY_VISION"    "30000"
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"    "30000"
+					//"MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE" "1000"
+					//"MODIFIER_PROPERTY_FIXED_DAY_VISION"		"10000"
+					//"MODIFIER_PROPERTY_FIXED_NIGHT_VISION"		"10000"
+				}
+			}
+		}
+	}
+
 	// ==LOOK AT THIS NET THAT I JUST FOUND==
 	// blame Cool Robbit
 	"robbie_net"
@@ -3626,4 +4103,5 @@
 	        }
 	    }
 	}
+
 }
