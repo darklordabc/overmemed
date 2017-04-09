@@ -3772,24 +3772,32 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"sven_gods_strength"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
 
 		"HasScepterUpgrade"				"1"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"80.0 80.0 80.0"
-		"AbilityDuration"				"25.0 25.0 25.0"
+		"AbilityCooldown"				"60.0 60.0 60.0 60.0"
+		"AbilityDuration"				"10.0 10.0 10.0 10.0"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 150 200"
+		"AbilityManaCost"				"150"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		}
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3798,7 +3806,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gods_strength_damage"		"100 150 200"		
+				"gods_strength_damage"		"20 40 60 100"		
 			}
 			"02"
 			{
@@ -3809,6 +3817,50 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"gods_strength_damage_scepter"	"75 100 125"		
+			}
+		}
+	}
+
+	"blink_baumi"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"antimage_blink"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50 40 30 20"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 50 25 0"
+		
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range"			"25000"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_blink_range"		"200"
 			}
 		}
 	}

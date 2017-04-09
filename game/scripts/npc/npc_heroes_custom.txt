@@ -233,11 +233,11 @@
 			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"tinker_march_of_the_machines_baumi"	// Ability 1.
+		"Ability1"					"blink_baumi"	// Ability 1.
 		"Ability2"					"troll_warlord_fervor_baumi"			// Ability 2.
 		"Ability3"					"sven_gods_strength_baumi"			// Ability 3.
-		"Ability4"					"legion_commander_duel_baumi"	// Ability 4.
-		"Ability5"					""		// Ability 5.
+		"Ability4"					"tinker_march_of_the_machines_baumi"	// Ability 4.
+		"Ability5"					"legion_commander_duel_baumi"		// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
