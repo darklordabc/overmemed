@@ -37,7 +37,9 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 **For more examples, check the pull requests that have already been merged, they will show exactly what files need to be modified https://github.com/darklordabc/overmemed/pulls?q=is%3Apr+is%3Aclosed**
 
 ## Done Heros
-10 out of 112 <br>
+11 out of 112 <br>
+**Baumi** - Legion Commander <br>
+![alt tag](http://i.imgur.com/pjvLmIM.png)<br>
 **Robbie Rotten** - Invoker - by BlueKingBar <br>
 ![alt tag](https://cdn.discordapp.com/attachments/272602385665228800/293009346839969792/unknown.png)<br>
 **FireToad** - Dragon Knight <br>
