@@ -61,6 +61,12 @@ function COverthrowGameMode:OnNPCSpawned( event )
 				eyes:SetHidden(false)
 			end
 		end
+		if spawnedUnit:GetName() == "npc_dota_hero_drow_ranger" then
+			local kick = spawnedUnit:FindAbilityByName("tusk_walrus_kick_sjw")
+			if kick then
+				kick:SetHidden(false)
+			end
+		end
 		if spawnedUnit:GetName() == "npc_dota_hero_skeleton_king" then
 			SkeletonKingWearables(spawnedUnit)
 			print("Skeleton King picked!")
