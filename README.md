@@ -40,6 +40,8 @@ I'm assuming most modders know this part, but if it helps anyone, than it will b
 
 ## Done Heros
 11 out of 112 <br>
+**Social Justice Ranger** - Drow Ranger <br>
+![alt tag](http://i.imgur.com/fT8fjbN.png)<br>
 **Baumi** - Legion Commander <br>
 ![alt tag](http://i.imgur.com/pjvLmIM.png)<br>
 **Robbie Rotten** - Invoker - by BlueKingBar <br>
