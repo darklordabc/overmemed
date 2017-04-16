@@ -242,4 +242,21 @@
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""
 	}
+
+	"npc_dota_hero_drow_ranger" 
+	{
+		"override_hero"   			"npc_dota_hero_drow_ranger"
+			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"vengefulspirit_command_aura_sjw"	// Ability 1.
+		"Ability2"					"drow_ranger_trueshot_sjw"			// Ability 2.
+		"Ability3"					"phantom_assassin_blur_sjw"			// Ability 3.
+		"Ability4"					"dark_troll_warlord_raise_dead_sjw"	// Ability 4.
+		"Ability5"					"tusk_walrus_kick_sjw"		// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""
+	}
+
 }
